@@ -1,5 +1,5 @@
 import { SidebarProvider } from "@/components/ui/sidebar";
-import { ThemeProvider } from "./ThemeProvider";
+import { ThemeProvider } from "./theme-provider";
 
 export function Provider({ children }: { children: React.ReactNode }) {
   return (

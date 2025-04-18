@@ -1,17 +1,10 @@
-import { Provider } from "@/components/providers/Provider";
-import { SidebarInset } from "@/components/ui/sidebar";
-import { Sidebar } from "@/components/sidebar";
-import { Breadcrumbs } from "@/components/breadcrumbs";
-import { Content } from "@/components/content";
+import { Provider } from "@/components/providers/provider";
+import RouterProvider from "@/app/index";
 
 function App() {
   return (
     <Provider>
-      <Sidebar />
-      <SidebarInset>
-        <Breadcrumbs />
-        <Content />
-      </SidebarInset>
+      <RouterProvider />
     </Provider>
   );
 }

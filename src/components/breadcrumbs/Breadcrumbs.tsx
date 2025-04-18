@@ -1,10 +1,10 @@
 import {
+  Breadcrumb,
+  BreadcrumbItem,
   BreadcrumbLink,
+  BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
 } from "@/components/ui/breadcrumb";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";

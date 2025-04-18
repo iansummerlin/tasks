@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
   Sidebar,
   SidebarContent,
@@ -11,40 +10,10 @@ import {
   SidebarMenuItem,
   SidebarRail,
 } from "@/components/ui/sidebar";
-import { Button } from "../ui/button";
 import { Plus } from "lucide-react";
-
-const data = [
-  {
-    title: "",
-    url: "",
-    items: [
-      {
-        title: "🏠 Dashboard",
-        url: "#",
-      },
-    ],
-  },
-  {
-    title: "Boards",
-    url: "#",
-    items: [
-      {
-        title: "Personal",
-        url: "#",
-      },
-      {
-        title: "Board 1",
-        url: "#",
-      },
-      {
-        title: "Board 2",
-        url: "#",
-        isActive: true,
-      },
-    ],
-  },
-];
+import type * as React from "react";
+import { Button } from "../ui/button";
+import { NavLink } from "react-router";
 
 export default function CustomSidebar({
   ...props
@@ -78,9 +47,12 @@ export default function CustomSidebar({
                       isActive={item.isActive}
                       className="w-full h-10 p-2 rounded-md hover:bg-accent transition-colors"
                     >
-                      <a href={item.url} className="flex items-center gap-2">
+                      <NavLink
+                        to={item.url}
+                        className="flex items-center gap-2"
+                      >
                         {item.title}
-                      </a>
+                      </NavLink>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
@@ -105,3 +77,35 @@ export default function CustomSidebar({
     </Sidebar>
   );
 }
+
+const data = [
+  {
+    title: "",
+    url: "",
+    items: [
+      {
+        title: "🏠 Dashboard",
+        url: "/",
+        isActive: true,
+      },
+    ],
+  },
+  {
+    title: "Boards",
+    url: "#",
+    items: [
+      {
+        title: "Personal",
+        url: "#",
+      },
+      {
+        title: "Board 1",
+        url: "#",
+      },
+      {
+        title: "Board 2",
+        url: "#",
+      },
+    ],
+  },
+];

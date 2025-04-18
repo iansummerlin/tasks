@@ -1,2 +1,2 @@
-export * from "./Provider";
-export { ThemeProviderContext } from "./ThemeProvider";
+export * from "./provider";
+export { ThemeProviderContext } from "./theme-provider";
