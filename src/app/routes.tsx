@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router";
-import Dashboard from "./dashboard";
 import { Layout } from "@/components/layout";
+import Dashboard from "./dashboard";
 
 const router = createBrowserRouter([
   {

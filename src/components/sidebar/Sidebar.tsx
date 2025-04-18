@@ -1,3 +1,5 @@
+import type * as React from "react";
+import { NavLink } from "react-router";
 import {
   Sidebar,
   SidebarContent,
@@ -11,9 +13,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import { Plus } from "lucide-react";
-import type * as React from "react";
 import { Button } from "../ui/button";
-import { NavLink } from "react-router";
 
 export default function CustomSidebar({
   ...props
@@ -44,7 +44,7 @@ export default function CustomSidebar({
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton
                       asChild
-                      isActive={item.isActive}
+                      // isActive={item.isActive}
                       className="w-full h-10 p-2 rounded-md hover:bg-accent transition-colors"
                     >
                       <NavLink
@@ -86,7 +86,6 @@ const data = [
       {
         title: "🏠 Dashboard",
         url: "/",
-        isActive: true,
       },
     ],
   },
