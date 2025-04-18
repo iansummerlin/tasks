@@ -1,16 +1,14 @@
+import { Link, useLocation, useParams } from "react-router";
 import { useData } from "@/hooks";
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-import { useLocation, useParams } from "react-router";
-import { Link } from "react-router";
 
 export default function Breadcrumbs() {
   const { data } = useData();
